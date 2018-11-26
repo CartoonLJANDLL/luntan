@@ -225,7 +225,7 @@
 			  $("#btn1").mouseover(function(){
 				  $("#btn1_show").css("display","block");
 			  });
-			  $(".mod_hang_appeal").mouseleave(function(){
+			  $(".jdc_feedback_qrcode").mouseleave(function(){
 				    $("#btn1_show").css("display","none");
 				});
 			  $("#btn2").mouseover(function(){
