@@ -154,7 +154,7 @@
 		    <div class="mod_hang_appeal">
 		    	<div class="mod_hang_appeal_btn"><img alt="" src="img/shoucang.png"></div>
 		    </div>
-		   <div class="mod_hang_qrcode jdc_feedback_qrcode">
+		   <div class="mod_hang_qrcode jdc_feedback_qrcode" id="mod-hang">
 		    <div class="mod_hang_qrcode_btn" id="btn1"><img alt="" src="img/fenxiang.png"></div>
 		    <div class="mod_hang_qrcode_show" id="btn1_show">
 		      <div class="mod_hang_qrcode_show_bg">
@@ -225,7 +225,7 @@
 			  $("#btn1").mouseover(function(){
 				  $("#btn1_show").css("display","block");
 			  });
-			  $(".jdc_feedback_qrcode").mouseleave(function(){
+			  $("#mod-hang").mouseleave(function(){
 				    $("#btn1_show").css("display","none");
 				});
 			  $("#btn2").mouseover(function(){
