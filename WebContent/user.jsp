@@ -26,6 +26,7 @@
 	.tab .nav-tabs li{
 		margin: 0;
 	}
+	#a{}
 	.tab .nav-tabs li a{
 		font-size: 14px;
 		color: #999898;
