@@ -40,7 +40,7 @@
 				<span>当前位置：
 					<label>论坛>>秦时明月</label>
 				</span>
-				<button class="btn btn-primary">我要发帖</button>
+				<button class="btn btn-primary" onclick="javascript:window.location.href='sendtiezi.jsp';">我要发帖</button>
 			</div>
 			<div class="col-md-4 text-right">
 				<button class="btn btn-primary">上一页</button>
