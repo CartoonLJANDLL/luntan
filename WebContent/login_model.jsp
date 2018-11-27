@@ -10,7 +10,7 @@
 <link href="css/menu-header.css" rel="stylesheet" />
 <title>登录窗口</title>
 <script>
-	$(document).on("focus","#psd,#userid",function(){
+	$(document).on("focus","#psd,#telphone",function(){
 		$("#err_message").hide();
 	});
 	$(document).on("keyup","#psd",function(){
@@ -27,54 +27,54 @@
 		else
 			$("#psd_err").html("");
 		});
-	$(document).on("blur","#userid",function(){
-		var userid=$("#userid").val();
+	$(document).on("blur","#telphone",function(){
+		var telphone=$("#telphone").val();
 		var reg1=/^\d{6,13}$/;
-		if(userid==""||userid==null){
-			$("#userid_err").html("请输入账号！");
-			$("#userid_err").show();
+		if(telphone==""||telphone==null){
+			$("#telphone_err").html("请输入账号！");
+			$("#telphone_err").show();
 		}
-		else if(!reg1.test(userid)){
-			$("#userid_err").html("账号格式不正确，请重新输入！");
-			$("#userid_err").show();
+		else if(!reg1.test(telphone)){
+			$("#telphone_err").html("账号格式不正确，请重新输入！");
+			$("#telphone_err").show();
 		}
 		else
-			$("#userid_err").html("");
+			$("#telphone_err").html("");
 		});
-	$(document).on("focus","#userid",function(){
-		var userid=$("#userid").val();
+	$(document).on("focus","#telphone",function(){
+		var telphone=$("#telphone").val();
 		var reg1=/^\d{6,13}$/;
-		if(userid==""||userid==null){
-			$("#userid_err").html("请输入账号！");
-			$("#userid_err").show();
+		if(telphone==""||telphone==null){
+			$("#telphone_err").html("请输入账号！");
+			$("#telphone_err").show();
 		}
-		else if(!reg1.test(userid)){
-			$("#userid_err").html("账号格式不正确，请重新输入！");
-			$("#userid_err").show();
+		else if(!reg1.test(telphone)){
+			$("#telphone_err").html("账号格式不正确，请重新输入！");
+			$("#telphone_err").show();
 		}
 		else
-			$("#userid_err").html("");
+			$("#telphone_err").html("");
 		});
-		$(document).on("keyup","#userid",function(){
-			var userid=$("#userid").val();
+		$(document).on("keyup","#telphone",function(){
+			var telphone=$("#telphone").val();
 			var reg1=/^\d{6,13}$/;
-			if(userid==""||userid==null){
-				$("#userid_err").html("请输入账号！");
-				$("#userid_err").show();
+			if(telphone==""||telphone==null){
+				$("#telphone_err").html("请输入手机号！");
+				$("#telphone_err").show();
 			}
-			else if(!reg1.test(userid)){
-				$("#userid_err").html("账号格式不正确，请重新输入！");
-				$("#userid_err").show();
+			else if(!reg1.test(telphone)){
+				$("#telphone_err").html("账号格式不正确，请重新输入！");
+				$("#telphone_err").show();
 			}
 			else
-				$("#userid_err").html("");
+				$("#telphone_err").html("");
 			});
 			$(document).on("click","#denglu",function(){
-			  var userid=$("#userid").val();
-			  var psd=$("#psd").val();
-			  var userid_err=$("#userid_err").val();
-			  var psd_err=$("#psd_err").val();
-			  alert(userid+psd+userid_err+psd_err);  
+			  var telphone=$("#telphone").val().trim();
+			  var psd=$("#psd").val().trim();
+			  var telphone_err=$("#telphone_err").text();
+			  var psd_err=$("#psd_err").text();
+			  if(telphone!=""&&psd!=""&&telphone_err==""&&psd_err=="")  
 				  $.ajax({
 				        //直接"post"或者"get",不需要"doPost","doGet"，该函数到后端接收缓冲区会自动匹配
 				        type : "get",      
@@ -110,8 +110,8 @@
 							<div class="modal-body">
 									<img src="img/LOGO.png" width="150px" height="50px"/>
 								<div class="row">
-									<div class="col-md-4 col-md-offset-4"><input type="text" id="userid" class="form-control" name="userid" placeholder="请输入账号/手机号"/></div>
-									<div class="col-md-4 text-left"><label id="userid_err" class="alert alert-warning"></label></div>
+									<div class="col-md-4 col-md-offset-4"><input type="text" id="telphone" class="form-control" name="telphone" placeholder="请输入账号/手机号"/></div>
+									<div class="col-md-4 text-left"><label id="telphone_err" class="alert alert-warning"></label></div>
 								</div><br />
 								<div class="row">
 									<div class="col-md-4 col-md-offset-4"><input type="password" id="psd" class="form-control" name="psd" placeholder="请输入密码"/></div>
