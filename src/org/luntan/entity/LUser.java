@@ -12,6 +12,7 @@ public class LUser {
 	String headurl;  //头像照片地址
 	String introduce;  //个人简介
 	
+	//
 	public LUser() {
 		
 	}
